@@ -1,3 +1,19 @@
-#container{
-    display: flexbox;
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#container {
+    display: flex;
+    border: 1px red solid;
+    max-width: 592px;
+    max-height: 592px;
+    flex-wrap: wrap;
+}
+
+.grid {
+    border: 1px brown solid;
+    width: 35px;
+    height: 35px;
 }
