@@ -13,13 +13,10 @@ for (let i=0; i < 256; i++) {
 };
 
 btn.addEventListener("click", () => {
-    grids.forEach((grid) => {
-        container.removeChild(grid);
-    });       
+    while (container.firstElementChild) {
+        container.removeChild(container.lastElementChild)
+    }
     sizeSelection();
-
-
-
 });
 
 function sizeSelection () {
