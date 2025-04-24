@@ -5,9 +5,9 @@ const body = document.querySelector("body");
 btn.textContent = "Choose your grid size"
 btn.setAttribute("style", "max-width:300px", "max-height:150px")
 
-// btn.addEventListener("click", () => {
-
-// });
+btn.addEventListener("click", () => {
+    prompt("Wtite the size of gird you want:","");
+});
 
 for (let i=0; i < 256; i++) {
     let div = document.createElement("div");
@@ -21,7 +21,11 @@ grids.forEach((grid) => {
     grid.addEventListener("mouseenter", () => {
         grid.style["background-color"] = "blue";
     });
-})
+});
 
-
+grids.forEach((grid) => {
+    grid.addEventListener("click", () => {
+        grid.style["background-color"] = null;
+    });
+}); 
 

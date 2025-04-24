@@ -10,8 +10,12 @@ body{
     max-width: 592px;
     max-height: 592px;
     flex-wrap: wrap;
+    align-self: center;
 }
 
+button{
+    align-self: center;
+}
 .grid {
     border: 1px brown solid;
     width: 35px;
