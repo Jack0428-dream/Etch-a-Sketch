@@ -32,7 +32,10 @@ function sizeSelection () {
     newGrid.forEach((grid) => {
         grid.setAttribute("style", "border: 1px solid brown; width:"+ nSize+"px;height:" + nSize +"px;");
         grid.addEventListener("mouseenter", () => {
-            grid.style["background-color"] = "blue";
+            let colorR = getRandom();
+            let colorG = getRandom();
+            let colorB = getRandom();
+            grid.style["background-color"] = "rgb("+colorR+", "+colorG+", "+colorB+")";
         });
     
         grid.addEventListener("click", () => {
@@ -46,8 +49,11 @@ function sizeSelection () {
 
 const grids = document.querySelectorAll(".grid");
 grids.forEach((grid) => {
+    let colorR = getRandom();
+    let colorG = getRandom();
+    let colorB = getRandom();
     grid.addEventListener("mouseenter", () => {
-        grid.style["background-color"] = "blue";
+        grid.style["background-color"] = "rgb("+colorR+", "+colorG+", "+colorB+")";
     });
 });
 
@@ -56,4 +62,9 @@ grids.forEach((grid) => {
         grid.style["background-color"] = null;
     });
 }); 
+
+function getRandom() {
+    let random = Math.random() * 255
+    return random.toFixed();
+}
 
